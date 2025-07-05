@@ -1,5 +1,5 @@
 #List
-from sympy import list2numpy
+from numpy.ma.core import product
 
 fruits = ["apple", "banana", "cherry"] #대괄호로 감싸면 문자열 리스트
 numbers = [1, 2, 3, 4, 5] #숫자 리스트
@@ -67,6 +67,54 @@ print("apple" in fruits) #부정으로 하고 싶으면 not in을 해주면 된�
 #리스트에 요소를 이어 붙이기
 result = "-".join(list1)
 print(result)
+
+
+#리스트 실습
+cart = []
+#3개의 상품명을 입력 받아서 cart에 추가하기
+# 최종적으로 cart를 출력
+
+product1 = (input("추가할 상품 : "))
+cart.append(product1)
+
+product2 = (input("추가할 상품 : "))
+cart.append(product2)
+
+product3 = (input("추가할 상품 : "))
+cart.append(product3)
+
+print(cart)
+
+
+
+
+#튜플
+colors = ("red", "blue", "green")
+numbers = (1, 2, 3, 4, 5)
+mixed = ("pink", 1, True)
+single_tuple = ("hello",) #요소를 하나만 넣고 싶으면 ,로 끝내줘야 한다.
+alphabet =  ("a", "a", "a", "b", "c", "c")
+#요소 접근
+print(colors[1]) #블루가 나온다.
+
+#요소 변경
+colors[1] = "yellow" #튜플은 요소 변경이 불가능 하다.
+
+#튜플 슬라이싱
+print(colors[:2])
+print(colors[::-1])
+
+#count
+print(alphabet.count("a"))
+
+#index
+print(alphabet.index("b")) #컬렉션 자료형 에서는 인덱스만 가능하고 find는 문자열에서만 가능하다.
+
+#튜플 언패킹
+a, b, c = colors #colors에 들어있는 순서대로 a, b, c에 red blue green이 들어가게 된다.
+print(a, b, c)
+
+
 
 
 
